@@ -9,38 +9,42 @@ INS_ID="i-d71f001a"
 #Use instance name to find the latest snapshot id
 INS_NAME="mo_cod_revamp_Prod"
 
+
+#######################		AUTOSCALING CONFIGURATION	#######################
 #Autoscaling config name
 AC_CONFIG="mo_sc_AC_$CDATETIME"
+
+#which key pari
+KP="poc-mce"
+#security group
+SG="sg-141ebb71 sg-7608a713 sg-8c00ace9 sg-eae8698f sg-ed04a688"
+#User data file:
+LABDATA="labuserdata.txt"
+#IAM PROFILE
+IAM_PF="mo_scsource_prod"
+#specify machine type
+INSTANCE_TYPE="m3.medium"
+
+#######################		END AUTOSCALING CONFIGURATION	#######################
+
+#######################		AUTOSCALING GROUP	#######################
 #Autoscaling group  name
 AC_GROUP_NAME="mo_cod_revamp_Prod"
 #desired-capacity
 DC="1"
 
-#IAM PROFILE
-IAM_PF="mo_scsource_prod"
 
-#security group
-SG="sg-141ebb71 sg-7608a713 sg-8c00ace9 sg-eae8698f sg-ed04a688"
 
-#User data file:
-LABDATA="labuserdata.txt"
 
-#VPC
-VPC="vpc-c8c931ad"
 #subnet
 SUBN="subnet-90a556e7"
 #AZ
 AZ="ap-southeast-1a"
-#which key pari
-KP="poc-mce"
 
-#specify machine type
-INSTANCE_TYPE="m3.medium"
-#which AMI you wanna use in autoscaling
-#AMI_ID="ami-6a0d0438"
 
 GP_MAX="2"
 GP_MIN="1"
+#######################		END AUTOSCALING GROUP	#######################
 
 HN=`hostname`
 
