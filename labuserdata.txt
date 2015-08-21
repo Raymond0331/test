@@ -1,0 +1,5 @@
+#cloud-config
+repo_update: true
+repo_upgrade: all
+runcmd:
+- /usr/bin/aws s3 sync s3://mo-scsource-prod /var/www/html
